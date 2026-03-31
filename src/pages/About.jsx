@@ -23,7 +23,7 @@ const About = () => {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-stone-600 text-lg md:text-xl leading-relaxed max-w-2xl">
-              Founded in 1995 by Subham Badgaiyan, our firm has grown from a local contractor in Katni to a premier construction and real estate company serving Central India. We believe in transparency, precision, and the enduring power of quality.
+              Founded in 1995 by Manoj Badgaiyan, our firm has grown from a local contractor in Katni to a premier construction and real estate company serving Central India. We believe in transparency, precision, and the enduring power of quality.
             </p>
           </Reveal>
         </div>
