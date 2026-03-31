@@ -27,7 +27,7 @@ const Footer = () => {
               Est. 1995 — Madhya Pradesh
             </span>
             <h2 className="text-6xl md:text-8xl lg:text-9xl font-light tracking-tighter leading-[0.85] mb-8">
-              MANOJ <br />
+              Subham <br />
               <span className="text-white/20 italic font-serif">BUILDERS</span>
             </h2>
           </div>
@@ -127,7 +127,7 @@ const Footer = () => {
                     <Mail size={14} className="text-[#B87333]" />
                 </div>
                 <p className="text-[13px] font-light text-slate-300 hover:text-white cursor-pointer transition-colors">
-                  info@manojbuilders.com
+                  info@Subhambuilders.com
                 </p>
               </div>
             </div>
@@ -138,7 +138,7 @@ const Footer = () => {
         <div className="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-12">
             <span className="text-[10px] uppercase tracking-[0.2em] text-slate-600">
-              © 1995—{currentYear} Manoj Builders & Developers
+              © 1995—{currentYear} Subham Builders & Developers
             </span>
             <div className="flex gap-8">
                 <Link to="/privacy" className="text-[10px] uppercase tracking-[0.2em] text-slate-600 hover:text-white transition-colors">Privacy</Link>

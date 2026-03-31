@@ -79,7 +79,7 @@ const NotFound = () => {
       {/* Bottom Branding */}
       <div className="absolute bottom-10 left-10 hidden md:block">
         <p className="text-[9px] tracking-[0.5em] text-white/10 uppercase vertical-text">
-            Manoj Builders & Developers
+            Subham Builders & Developers
         </p>
       </div>
     </div>

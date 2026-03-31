@@ -37,7 +37,7 @@ const BrandIntro = () => {
             <Reveal delay={0.4}>
               <div className="max-w-xl">
                 <p className="text-lg md:text-xl text-stone-600 font-light leading-relaxed mb-8">
-                  Founded in 1995 by <span className="font-medium text-stone-900">Manoj Badgaiyan</span>, 
+                  Founded in 1995 by <span className="font-medium text-stone-900">Subham Badgaiyan</span>, 
                   our practice transcends traditional construction. We deliver residential and commercial 
                   landmarks across Katni and Indore.
                 </p>
@@ -58,7 +58,7 @@ const BrandIntro = () => {
                 <div className="group relative bg-white p-10 md:p-12 shadow-[20px_20px_60px_rgba(0,0,0,0.03)] border-l-2" style={{ borderLeftColor: brandWine }}>
                   <div className="uppercase tracking-[0.4em] text-[9px] text-stone-400 mb-4 font-bold">The Visionary</div>
                   <div className="font-serif text-3xl md:text-4xl transition-colors duration-500 group-hover:text-[#B87333]" style={{ color: darkTeal }}>
-                    Manoj <br /> Badgaiyan
+                    Subham <br /> Badgaiyan
                   </div>
                   <div className="absolute top-8 right-8 text-stone-100 font-serif text-6xl select-none group-hover:text-stone-200 transition-colors duration-500">
                     01
