@@ -29,11 +29,7 @@ const services = [
     desc: 'Precise engineering drawings and coordination for safe, efficient structures. Our structural detailing ensures the longevity and stability of your investment.',
     img: 'img/a (5).jpeg',
   },
-  {
-    title: 'Nagar Nigam Naksha Pass',
-    desc: 'Navigating municipal approvals with compliant documentation and persistent follow-through. We handle the regulatory complexities so you can focus on the vision.',
-    img: 'img/a (6).jpeg',
-  },
+  
 ];
 
 const Services = () => {
