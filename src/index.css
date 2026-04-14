@@ -8,6 +8,10 @@
     color: #111827;
   }
   
+  h1, h2, h3 {
+    text-transform: capitalize;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Georgia', 'Times New Roman', serif;
     letter-spacing: -0.01em;

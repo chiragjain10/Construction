@@ -28,7 +28,7 @@ const CTASection = () => {
         <Reveal delay={0.2}>
           <h2 className="font-serif text-5xl md:text-8xl text-white leading-[1] mb-12 max-w-5xl">
             Let’s build with <br />
-            <span className="italic text-stone-400">clarity and intent.</span>
+            <span className="italic text-stone-400">clarity & intent.</span>
           </h2>
         </Reveal>
 
