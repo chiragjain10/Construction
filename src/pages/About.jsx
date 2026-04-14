@@ -39,7 +39,7 @@ const About = () => {
 
         <div className="max-w-[1440px] mx-auto relative z-10">
           <div className="mb-20 text-center">
-            <span className="text-[10px] uppercase tracking-[0.4em] text-[#B87333] font-bold">Milestones</span>
+            <span className="text-[14px] uppercase tracking-[0.4em] text-[#B87333] font-bold">Milestones</span>
             <h3 className="font-serif text-4xl md:text-5xl mt-4 text-[#0e3a40]">A History of Experience</h3>
           </div>
 
@@ -130,7 +130,7 @@ const About = () => {
         <div className="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-16">
           <div>
             <Reveal>
-              <span className="text-[10px] uppercase tracking-[0.4em] text-[#B87333] font-bold">Our Philosophy</span>
+              <span className="text-[14px] uppercase tracking-[0.4em] text-[#B87333] font-bold">Our Philosophy</span>
               <h3 className="font-serif text-4xl md:text-5xl mt-6 leading-tight">
                 "Quality is not an act, it is a <span className="italic text-stone-400">habit</span>."
               </h3>
@@ -141,11 +141,11 @@ const About = () => {
               <div className="mt-12 grid grid-cols-2 gap-8">
                  <div>
                     <h4 className="font-serif text-xl mb-2">Mr. Manoj Badgaiyan</h4>
-                    <p className="text-xs uppercase tracking-widest text-stone-400">Founder</p>
+                    <p className="text-sm uppercase tracking-widest text-stone-400">Founder</p>
                  </div>
                  <div>
                     <h4 className="font-serif text-xl mb-2">Shubham Badgaiyan</h4>
-                    <p className="text-xs uppercase tracking-widest text-stone-400">Structural Engineer</p>
+                    <p className="text-sm uppercase tracking-widest text-stone-400">Structural Engineer</p>
                  </div>
               </div>
             </Reveal>

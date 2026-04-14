@@ -25,7 +25,7 @@ const images = [
 const ProjectsPreview = () => {
   const brandWine = '#B87333';
   const darkTeal = '#0e3a40';
-  
+
   // Refs for custom premium navigation
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -33,7 +33,7 @@ const ProjectsPreview = () => {
   return (
     <section className="py-24 md:py-32 bg-[#f9f8f6] overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
-        
+
         {/* Premium Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <Reveal>
@@ -42,7 +42,7 @@ const ProjectsPreview = () => {
                 Portfolio
               </span>
               <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1]" style={{ color: darkTeal }}>
-                Our <span className="italic text-stone-400">Works</span>
+                Our <span className="italic text-[#B87333]">Works</span>
               </h2>
             </div>
           </Reveal>
@@ -58,14 +58,14 @@ const ProjectsPreview = () => {
 
             {/* Desktop Carousel Controls */}
             <div className="hidden md:flex items-center gap-4">
-              <button 
+              <button
                 ref={prevRef}
                 className="w-12 h-12 rounded-full border border-stone-200 flex items-center justify-center group hover:bg-[#0e3a40] hover:border-[#0e3a40] transition-colors duration-300"
                 aria-label="Previous slide"
               >
                 <span className="text-sm group-hover:text-white transition-colors duration-300">←</span>
               </button>
-              <button 
+              <button
                 ref={nextRef}
                 className="w-12 h-12 rounded-full border border-stone-200 flex items-center justify-center group hover:bg-[#0e3a40] hover:border-[#0e3a40] transition-colors duration-300"
                 aria-label="Next slide"
@@ -146,7 +146,7 @@ const ProjectCard = ({ project, color, teal }) => (
   <Link to={`/gallery`} className="group block relative">
     {/* Using portrait aspect ratio (3/4) for an editorial, high-fashion look */}
     <div className="relative overflow-hidden aspect-[3/4] bg-stone-100">
-      
+
       {/* Number Label - Floating top left */}
       <div className="absolute top-6 left-6 z-20 overflow-hidden">
         <span className="block text-[10px] font-bold text-white tracking-widest translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.2,1,0.3,1)]">
@@ -154,15 +154,15 @@ const ProjectCard = ({ project, color, teal }) => (
         </span>
       </div>
 
-      <img 
-        src={project.src} 
+      <img
+        src={project.src}
         alt={project.label}
-        className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-[1.5s] ease-[cubic-bezier(0.2,1,0.3,1)]" 
+        className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-[1.5s] ease-[cubic-bezier(0.2,1,0.3,1)]"
       />
-      
+
       {/* Premium Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#0e3a40]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-      
+
       {/* Dynamic Title Reveal on Hover */}
       <div className="absolute bottom-8 left-6 z-20 overflow-hidden">
         {/* <p className="font-serif text-white text-2xl italic translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.2,1,0.3,1)] delay-75">
@@ -171,9 +171,9 @@ const ProjectCard = ({ project, color, teal }) => (
       </div>
 
       {/* Accent Corner Line */}
-      <div 
-        className="absolute bottom-0 left-0 w-0 h-[2px] transition-all duration-700 group-hover:w-full" 
-        style={{ backgroundColor: color }} 
+      <div
+        className="absolute bottom-0 left-0 w-0 h-[2px] transition-all duration-700 group-hover:w-full"
+        style={{ backgroundColor: color }}
       />
     </div>
   </Link>

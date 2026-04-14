@@ -86,7 +86,7 @@ const Preloader = () => {
                     />
                     
                     <div className="text-center space-y-2">
-                        <h2 className="text-white text-[10px] md:text-[11px] tracking-[0.6em] uppercase font-light opacity-80">
+                        <h2 className="text-white text-[14px] tracking-[0.6em] uppercase font-light opacity-80">
                             Engineering Excellence
                         </h2>
                     </div>
@@ -98,8 +98,8 @@ const Preloader = () => {
                     ${phase === 'exit' ? 'opacity-0' : 'opacity-100'}
                 `}>
                     <div className="flex justify-between items-center mb-4">
-                        <span className="text-[8px] tracking-[0.4em] text-white/30 uppercase font-bold">Project Loading</span>
-                        <span className="font-mono text-[10px] text-white/60 tracking-widest">{Math.round(progress)}%</span>
+                        <span className="text-[14px] tracking-[0.4em] text-white/30 uppercase font-bold">Project Loading</span>
+                        <span className="font-mono text-[14px] text-white/60 tracking-widest">{Math.round(progress)}%</span>
                     </div>
 
                     {/* Ultra-thin Minimalist Progress Bar */}
@@ -121,7 +121,7 @@ const Preloader = () => {
                     ${phase === 'exit' ? 'opacity-0 translate-y-4' : 'opacity-100'}
                 `}>
                     {['KATNI', 'INDORE', 'BHOPAL'].map((city) => (
-                        <span key={city} className="text-[9px] tracking-[0.3em] text-white/20 uppercase font-medium">
+                        <span key={city} className="text-[14px] tracking-[0.3em] text-white/20 uppercase font-medium">
                             {city}
                         </span>
                     ))}

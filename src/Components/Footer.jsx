@@ -23,7 +23,7 @@ const Footer = () => {
         {/* --- Top Section: Massive Branding & CTA --- */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-16 pb-20 border-b border-white/5">
           <div className="max-w-2xl">
-            <span className={`text-[11px] uppercase tracking-[0.6em] text-[#B87333] font-bold block mb-6`}>
+            <span className={`text-[14px] uppercase tracking-[0.6em] text-[#B87333] font-bold block mb-6`}>
               Est. 1995 — Madhya Pradesh
             </span>
             <h2 className="text-6xl md:text-8xl lg:text-9xl font-light tracking-tighter leading-[0.85] mb-8">
@@ -38,7 +38,7 @@ const Footer = () => {
               className="group flex flex-col items-start lg:items-end gap-4"
             >
               <div className="flex items-center gap-4 text-white group-hover:text-[#B87333] transition-all duration-500">
-                <span className="uppercase text-[12px] tracking-[0.4em] font-bold">Start your project</span>
+                <span className="uppercase text-[14px] tracking-[0.4em] font-bold">Start your project</span>
                 <div className="p-3 border border-white/10 rounded-full group-hover:bg-[#B87333] group-hover:border-[#B87333] transition-all duration-500">
                     <ArrowUpRight size={24} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500" />
                 </div>
@@ -47,7 +47,7 @@ const Footer = () => {
             
             <button 
                 onClick={scrollToTop}
-                className="hidden lg:flex items-center gap-3 text-white/30 hover:text-white transition-colors duration-300 text-[10px] uppercase tracking-[0.3em]"
+                className="hidden lg:flex items-center gap-3 text-white/30 hover:text-white transition-colors duration-300 text-[14px] uppercase tracking-[0.3em]"
             >
                 Back to Top <ArrowUp size={14} />
             </button>
@@ -72,13 +72,13 @@ const Footer = () => {
 
           {/* Extended Navigation */}
           <div className="space-y-8">
-            <h4 className="text-[11px] uppercase tracking-[0.3em] text-[#B87333] font-bold">Directory</h4>
+            <h4 className="text-[14px] uppercase tracking-[0.3em] text-[#B87333] font-bold">Directory</h4>
             <ul className="grid grid-cols-1 gap-4">
               {['Home', 'About', 'Services', 'Gallery', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link 
                     to={`/${item.toLowerCase()}`} 
-                    className="text-slate-300 hover:text-white text-[13px] font-light transition-all duration-300 flex items-center gap-0 hover:gap-3 group"
+                    className="text-slate-300 hover:text-white text-[14px] font-light transition-all duration-300 flex items-center gap-0 hover:gap-3 group"
                   >
                     <div className="w-0 h-[1px] bg-[#B87333] group-hover:w-6 transition-all duration-500" />
                     {item}
@@ -90,8 +90,8 @@ const Footer = () => {
 
           {/* Specialized Services */}
           <div className="space-y-8">
-            <h4 className="text-[11px] uppercase tracking-[0.3em] text-[#B87333] font-bold">Specialization</h4>
-            <ul className="space-y-4 text-slate-400 text-[13px] font-light">
+            <h4 className="text-[14px] uppercase tracking-[0.3em] text-[#B87333] font-bold">Specialization</h4>
+            <ul className="space-y-4 text-slate-400 text-[14px] font-light">
               <li className="hover:text-white transition-colors cursor-default">Turnkey Construction</li>
               <li className="hover:text-white transition-colors cursor-default">Luxury Residential</li>
               <li className="hover:text-white transition-colors cursor-default">Commercial Infrastructure</li>
@@ -102,22 +102,39 @@ const Footer = () => {
 
           {/* Contact & Locations */}
           <div className="space-y-8">
-            <h4 className="text-[11px] uppercase tracking-[0.3em] text-[#B87333] font-bold">Branch Offices</h4>
+            <h4 className="text-[14px] uppercase tracking-[0.3em] text-[#B87333] font-bold">Our Offices</h4>
             <div className="space-y-6">
+              {/* Head Office */}
               <div className="flex items-start gap-4 group">
                 <div className="mt-1 p-2 bg-white/5 rounded-sm group-hover:bg-[#B87333]/20 transition-colors">
                     <MapPin size={14} className="text-[#B87333]" />
                 </div>
-                <p className="text-[13px] font-light text-slate-300 leading-loose">
-                  Saraswati School Road, <br />
-                  Nai Basti, Katni, MP 483501
-                </p>
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#B87333] font-bold block mb-1">Head Office</span>
+                  <p className="text-[14px] font-light text-slate-300 leading-relaxed">
+                    Vijay Nagar, Indore, <br />
+                    Madhya Pradesh
+                  </p>
+                </div>
+              </div>
+              {/* Branch Office */}
+              <div className="flex items-start gap-4 group">
+                <div className="mt-1 p-2 bg-white/5 rounded-sm group-hover:bg-[#B87333]/20 transition-colors">
+                    <MapPin size={14} className="text-[#B87333]" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#B87333] font-bold block mb-1">Branch Office</span>
+                  <p className="text-[14px] font-light text-slate-300 leading-relaxed">
+                    Saraswati School Road, <br />
+                    Nai Basti, Katni, MP 483501
+                  </p>
+                </div>
               </div>
               <div className="flex items-start gap-4 group">
                 <div className="mt-1 p-2 bg-white/5 rounded-sm group-hover:bg-[#B87333]/20 transition-colors">
                     <Phone size={14} className="text-[#B87333]" />
                 </div>
-                <div className="text-[13px] font-light text-slate-300 space-y-1">
+                <div className="text-[14px] font-light text-slate-300 space-y-1">
                   <p className="hover:text-white cursor-pointer transition-colors">+91 98272 16004</p>
                   <p className="hover:text-white cursor-pointer transition-colors">+91 84618 83444</p>
                 </div>
@@ -126,7 +143,7 @@ const Footer = () => {
                 <div className="mt-1 p-2 bg-white/5 rounded-sm group-hover:bg-[#B87333]/20 transition-colors">
                     <Mail size={14} className="text-[#B87333]" />
                 </div>
-                <p className="text-[13px] font-light text-slate-300 hover:text-white cursor-pointer transition-colors">
+                <p className="text-[14px] font-light text-slate-300 hover:text-white cursor-pointer transition-colors">
                   info@Subhambuilders.com
                 </p>
               </div>
@@ -137,18 +154,18 @@ const Footer = () => {
         {/* --- Bottom Section: Legal --- */}
         <div className="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-12">
-            <span className="text-[10px] uppercase tracking-[0.2em] text-slate-600">
+            <span className="text-[14px] uppercase tracking-[0.2em] text-slate-600">
               © 1995—{currentYear} Shubham Builders & Developers
             </span>
             <div className="flex gap-8">
-                <Link to="/privacy" className="text-[10px] uppercase tracking-[0.2em] text-slate-600 hover:text-white transition-colors">Privacy</Link>
-                <Link to="/terms" className="text-[10px] uppercase tracking-[0.2em] text-slate-600 hover:text-white transition-colors">Terms</Link>
+                <Link to="/privacy" className="text-[14px] uppercase tracking-[0.2em] text-slate-600 hover:text-white transition-colors">Privacy</Link>
+                <Link to="/terms" className="text-[14px] uppercase tracking-[0.2em] text-slate-600 hover:text-white transition-colors">Terms</Link>
             </div>
           </div>
           
           <div className="flex items-center gap-2">
-            <span className="text-[9px] uppercase tracking-[0.3em] text-slate-700 font-medium">Crafted by</span>
-            <span className="text-[9px] uppercase tracking-[0.3em] text-slate-400 font-bold hover:text-[#B87333] transition-colors cursor-pointer">Digital Studio</span>
+            <span className="text-[14px] uppercase tracking-[0.3em] text-slate-700 font-medium">Crafted by</span>
+            <span className="text-[14px] uppercase tracking-[0.3em] text-slate-400 font-bold hover:text-[#B87333] transition-colors cursor-pointer">Digital Studio</span>
           </div>
         </div>
       </div>

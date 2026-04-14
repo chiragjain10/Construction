@@ -1,35 +1,46 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageHero from '../Components/PageHero';
 import Reveal from '../Components/Reveal';
 import CTASection from '../Components/home/CTASection';
 
 const services = [
   {
+    id: 'building-design',
     title: 'Building Design',
     desc: 'From initial concept to construction-ready drawings, we provide functional planning that balances aesthetics with practicality. Our design process ensures clarity in detailing and efficiency in execution.',
     img: 'img/a (2).jpeg',
   },
   {
+    id: 'construction',
     title: 'Construction',
     desc: 'End-to-end execution with a focus on quality materials, strict supervision, and safety standards. We manage the entire lifecycle, ensuring timelines are met without compromising on structural integrity.',
     img: 'img/a (1).jpeg',
   },
   {
+    id: 'elevation-design',
     title: 'Elevation Design',
     desc: 'Creating modern facades and proportional massing aligned to context and budget. We craft elevations that make a statement while remaining harmonious with the surroundings.',
     img: 'img/a (3).jpeg',
   },
   {
+    id: 'interior-design',
     title: 'Interior Design',
     desc: 'Clean, durable, and timeless interiors with cohesive material palettes. We focus on creating spaces that are not just visually appealing but also deeply comfortable and functional.',
     img: 'img/a (4).jpeg',
   },
   {
+    id: 'structural-detail',
     title: 'Structural Detail',
     desc: 'Precise engineering drawings and coordination for safe, efficient structures. Our structural detailing ensures the longevity and stability of your investment.',
     img: 'img/a (5).jpeg',
   },
-  
+  {
+    id: 'plan-approval',
+    title: 'Plan Approval',
+    desc: 'Compliant submissions and Nagar Nigam Naksha approvals. We handle the process of legal compliance and municipal coordination.',
+    img: 'https://images.unsplash.com/photo-1582213726894-4974473a21b4?q=80&w=2070&auto=format&fit=crop',
+  },
 ];
 
 const Services = () => {
@@ -45,7 +56,7 @@ const Services = () => {
       <section className="py-24 px-6 md:px-16 max-w-[1440px] mx-auto">
         <div className="max-w-4xl">
           <Reveal>
-             <span className="text-[10px] uppercase tracking-[0.4em] text-[#B87333] font-bold block mb-6">What We Do</span>
+             <span className="text-[14px] uppercase tracking-[0.4em] text-[#B87333] font-bold block mb-6">What We Do</span>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight text-[#0E3A40]">
               Detailed, accountable, and <span className="italic text-stone-400">design-led</span> services across architecture, interiors, and execution.
             </h2>
@@ -84,20 +95,19 @@ const Services = () => {
             {/* Content Side */}
             <div className={`${i % 2 === 1 ? 'lg:order-1' : ''} relative z-10`}>
               <Reveal direction={i % 2 === 1 ? 'right' : 'left'}>
-                <span className="text-[10px] uppercase tracking-[0.4em] text-[#B87333] font-bold mb-4 block">
+                <span className="text-[14px] uppercase tracking-[0.4em] text-[#B87333] font-bold mb-4 block">
                    Service 0{i + 1}
                 </span>
                 <h3 className="text-3xl md:text-4xl font-serif text-[#0E3A40] mb-6">{s.title}</h3>
                 <div className="h-[1px] w-12 bg-[#B87333] mb-8" />
-                <p className="text-stone-600 text-lg leading-relaxed">
+                <p className="text-stone-600 text-[16px] leading-relaxed mb-10">
                   {s.desc}
                 </p>
                 
-                {/* Optional "Learn More" link style */}
-                {/* <button className="mt-8 group flex items-center gap-3 text-[#0E3A40] text-xs uppercase tracking-widest font-bold">
-                  Learn More 
+                <Link to={`/service/${s.id}`} className="group flex items-center gap-3 text-[#0E3A40] text-[14px] uppercase tracking-widest font-bold">
+                  View Service Details 
                   <span className="w-8 h-[1px] bg-[#0E3A40] group-hover:w-12 transition-all duration-300" />
-                </button> */}
+                </Link>
               </Reveal>
             </div>
 

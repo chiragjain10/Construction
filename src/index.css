@@ -2,10 +2,15 @@
 
 /* Global Font Family Settings */
 @layer base {
+  html {
+    font-size: 16px;
+  }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     background-color: #f7f7f5;
     color: #111827;
+    font-size: 14px;
+    line-height: 1.6;
   }
   
   h1, h2, h3 {

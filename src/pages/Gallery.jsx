@@ -105,13 +105,13 @@ const Gallery = () => {
                   {/* Overlay Content */}
                   <div className="absolute inset-0 p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
-                      <span className="text-[#B87333] text-[10px] uppercase tracking-[0.3em] font-bold mb-2 block">
+                      <span className="text-[#B87333] text-[14px] uppercase tracking-[0.3em] font-bold mb-2 block">
                         {project.category}
                       </span>
                       <h3 className="text-white font-serif text-2xl md:text-3xl mb-6">
                         {project.title}
                       </h3>
-                      <button className="flex items-center gap-2 text-white text-xs uppercase tracking-widest border-b border-white/30 pb-1 hover:border-white transition-colors cursor-pointer" onClick={(e) => { e.stopPropagation(); setSelectedImage(project.src); }}>
+                      <button className="flex items-center gap-2 text-white text-sm uppercase tracking-widest border-b border-white/30 pb-1 hover:border-white transition-colors cursor-pointer" onClick={(e) => { e.stopPropagation(); setSelectedImage(project.src); }}>
                         View Full Image <ArrowUpRight size={14} />
                       </button>
                     </div>
@@ -131,7 +131,7 @@ const Gallery = () => {
           <div className="mt-16 flex justify-center">
             <button 
               onClick={handleShowMore}
-              className="bg-[#111827] text-white px-8 py-4 uppercase tracking-widest text-xs font-bold hover:bg-[#B87333] transition-colors duration-300"
+              className="bg-[#111827] text-white px-8 py-4 uppercase tracking-widest text-sm font-bold hover:bg-[#B87333] transition-colors duration-300"
             >
               Show More
             </button>

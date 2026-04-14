@@ -31,7 +31,7 @@ const NotFound = () => {
             </div>
         </div>
 
-        <span className="text-[11px] uppercase tracking-[0.8em] text-[#B87333] font-bold block mb-4">
+        <span className="text-[14px] uppercase tracking-[0.8em] text-[#B87333] font-bold block mb-4">
             Error Code: Structural Gap
         </span>
         
@@ -47,7 +47,7 @@ const NotFound = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link 
             to="/" 
-            className="group flex items-center gap-3 bg-[#B87333] text-white px-8 py-4 text-[12px] uppercase tracking-widest font-bold transition-all duration-500 hover:bg-[#1a335a] shadow-[0_10px_30px_rgba(37,71,122,0.2)]"
+            className="group flex items-center gap-3 bg-[#B87333] text-white px-8 py-4 text-[14px] uppercase tracking-widest font-bold transition-all duration-500 hover:bg-[#1a335a] shadow-[0_10px_30px_rgba(37,71,122,0.2)]"
           >
             <Home size={16} className="transition-transform group-hover:-translate-y-1" />
             Return to Home
@@ -55,7 +55,7 @@ const NotFound = () => {
           
           <Link 
             to="/contact" 
-            className="group flex items-center gap-3 border border-white/10 px-8 py-4 text-[12px] uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-all duration-500"
+            className="group flex items-center gap-3 border border-white/10 px-8 py-4 text-[14px] uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-all duration-500"
           >
             <Map size={16} />
             Consult Site Map
@@ -68,7 +68,7 @@ const NotFound = () => {
                 <Link 
                     key={item}
                     to={`/${item.toLowerCase().replace(' ', '')}`}
-                    className="text-[10px] uppercase tracking-[0.3em] text-slate-500 hover:text-[#B87333] transition-colors"
+                    className="text-[14px] uppercase tracking-[0.3em] text-slate-500 hover:text-[#B87333] transition-colors"
                 >
                     {item}
                 </Link>
@@ -78,7 +78,7 @@ const NotFound = () => {
 
       {/* Bottom Branding */}
       <div className="absolute bottom-10 left-10 hidden md:block">
-        <p className="text-[9px] tracking-[0.5em] text-white/10 uppercase vertical-text">
+        <p className="text-[14px] tracking-[0.5em] text-white/10 uppercase vertical-text">
             Shubham Builders & Developers
         </p>
       </div>

@@ -49,7 +49,7 @@ const Header = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`relative text-[13px] font-medium tracking-[0.1em] uppercase transition-all duration-300 group ${
+                className={`relative text-[14px] font-medium tracking-[0.1em] uppercase transition-all duration-300 group ${
                   isScrolled ? 'text-slate-600 hover:text-[#0e3a40]' : 'text-slate-200 hover:text-white'
                 }`}
               >
@@ -62,7 +62,7 @@ const Header = () => {
             {/* Premium CTA Button */}
             <Link 
               to="/contact" 
-              className={`ml-6 px-7 py-3 text-[12px] uppercase tracking-[0.15em] font-semibold transition-all duration-500 flex items-center gap-2 group ${
+              className={`ml-6 px-7 py-3 text-[14px] uppercase tracking-[0.15em] font-semibold transition-all duration-500 flex items-center gap-2 group ${
                 isScrolled 
                 ? 'bg-[#0e3a40] text-white hover:bg-[#1a335a] shadow-[0_4px_14px_0_rgba(37,71,122,0.39)] hover:shadow-[0_6px_20px_rgba(37,71,122,0.23)]' 
                 : 'bg-white text-[#0e3a40] hover:bg-slate-100'
@@ -120,7 +120,7 @@ const Header = () => {
               transform: mobileOpen ? 'translateY(0)' : 'translateY(20px)' 
             }}
           >
-            <p className="text-[11px] uppercase tracking-widest text-slate-400 font-bold mb-4">Ready to build?</p>
+            <p className="text-[14px] uppercase tracking-widest text-slate-400 font-bold mb-4">Ready to build?</p>
             <Link 
               to="/contact"
               onClick={() => setMobileOpen(false)}
