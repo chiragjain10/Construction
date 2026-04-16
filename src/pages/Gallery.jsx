@@ -94,7 +94,7 @@ const Gallery = () => {
           {projects.slice(0, visibleCount).map((project, i) => (
             <div key={i} className="break-inside-avoid cursor-pointer" onClick={() => setSelectedImage(project.src)}>
               <Reveal delay={(i % 9) * 0.1}>
-                <div className="group relative overflow-hidden bg-[#0c0a09] aspect-[4/5] md:aspect-auto">
+                <div className="group relative overflow-hidden bg-[#0c0a09]">
                   {/* Image */}
                   <img 
                     src={project.src} 
