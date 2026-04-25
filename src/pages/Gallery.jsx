@@ -76,7 +76,7 @@ const Gallery = () => {
     <main className="bg-[#f7f7f5] text-[#111827]">
       <PageHero 
         title="Our Works." 
-        subtitle="A Portfolio of Excellence"
+        subtitle="Explore Our Dream Projects"
         backgroundImage="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop"
       />
 

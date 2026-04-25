@@ -53,8 +53,8 @@ const Contact = () => {
                   <div className="space-y-6">
                     <div>
                       <span className="text-[14px] uppercase tracking-[0.3em] text-[#B87333] font-bold block mb-2">Head Office</span>
-                      <p className="font-serif text-xl text-[#0E3A40]">Vijay Nagar, Indore,</p>
-                      <p className="font-serif text-xl text-[#0E3A40]">Madhya Pradesh</p>
+                      <p className="font-serif text-xl text-[#0E3A40]">Near prestige college,scheme no 113-</p>
+                      <p className="font-serif text-xl text-[#0E3A40]">Vijay Nagar Indore mp 452010</p>
                     </div>
                     <div>
                       <span className="text-[14px] uppercase tracking-[0.3em] text-[#B87333] font-bold block mb-2">Branch Office</span>
@@ -85,8 +85,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <span className="text-[14px] uppercase tracking-[0.3em] text-[#B87333] font-bold block mb-2">Email Us</span>
-                    <a href="mailto:contact@Subhambuilders.com" className="font-serif text-xl text-[#0E3A40] hover:text-[#B87333] transition-colors">
-                      contact@Subhambuilders.com
+                    <a href="mailto:contact@Shubhambuilders.com" className="font-serif text-xl text-[#0E3A40] hover:text-[#B87333] transition-colors">
+                      contact@Shubhambuilders.com
                     </a>
                   </div>
                 </div>

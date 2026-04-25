@@ -63,7 +63,7 @@ const PrivacyPolicy = () => {
 
                         <section className="mb-12 text-stone-500 text-sm italic">
                             <p>Last Updated: April 2026</p>
-                            <p>For further inquiries, contact us at info@Subhambuilders.com</p>
+                            <p>For further inquiries, contact us at info@Shubhambuilders.com</p>
                         </section>
                     </div>
                 </Reveal>

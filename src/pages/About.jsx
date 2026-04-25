@@ -17,8 +17,8 @@ const About = () => {
       <section className="py-24 px-6 md:px-16 max-w-[1440px] mx-auto">
         <div className="max-w-4xl">
           <Reveal>
-            <h2 className="font-serif text-4xl md:text-6xl leading-tight mb-8 text-[#0e3a40]">
-              Shubham Builders <span className="italic text-[#B87333]">bridges the gap</span> between visionary architecture and disciplined execution.
+            <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-8 text-[#0e3a40]">
+              Shubham Builders <span className="italic text-[#B87333]">brings together smart design & quality construction.</span>We specialize in residential & commercial projects across Central India.
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -140,7 +140,7 @@ const About = () => {
               
               <div className="mt-12 grid grid-cols-2 gap-8">
                  <div>
-                    <h4 className="font-serif text-xl mb-2">Mr. Manoj Badgaiyan</h4>
+                    <h4 className="font-serif text-xl mb-2">Mr.Manoj Badgaiyan</h4>
                     <p className="text-sm uppercase tracking-widest text-stone-400">Founder</p>
                  </div>
                  <div>

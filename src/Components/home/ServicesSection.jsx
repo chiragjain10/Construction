@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import Reveal from '../../Components/Reveal';
 
 const services = [
-  { id: 'building-design', t: 'Building Design', d: 'From concept to construction-ready drawings with precise detailing.' },
-  { id: 'construction', t: 'Construction', d: 'Executed with quality materials and disciplined supervision.' },
-  { id: 'elevation-design', t: 'Elevation Design', d: 'Proportioned facades aligned to context and budget.' },
-  { id: 'interior-design', t: 'Interior Design', d: 'Durable, cohesive interiors with timeless material palettes.' },
-  { id: 'structural-detail', t: 'Structural Detail', d: 'Engineering for safe, efficient structures.' },
-  { id: 'plan-approval', t: 'Nagar Nigam Plan Approval', d: 'Compliant submissions and Nagar Nigam Naksha approvals.' },
+  { id: 'plan-approval', t: 'Nagar Nigam Plan Approval', d: 'Compliant submissions and Nagar Nigam Naksha approvals for local authorities.' },
+  { id: 'structural-detail', t: 'Structure Detailing', d: 'Advanced engineering for safe, efficient, and durable structures.' },
+  { id: 'building-planning', t: 'Building Planning', d: 'From concept to construction-ready drawings with precise detailing and spatial optimization.' },
+  { id: 'elevation-design', t: 'Elevation Design', d: 'Proportioned facades aligned to context, budget, and modern aesthetics.' },
+  { id: 'construction', t: 'Construction', d: 'Executed with quality materials, disciplined supervision, and engineering excellence.' },
+  { id: 'interior-design', t: 'Interior Design', d: 'Durable, cohesive interiors with timeless material palettes and functional elegance.' },
 ];
 
 const ServicesSection = () => {

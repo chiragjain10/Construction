@@ -16,6 +16,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsConditions from "./pages/TermsConditions.jsx";
 import NotFound from "./Components/Notfound.jsx";
 import WhatsAppButton from "./Components/WhatsAppButton";
+import PopupForm from "./Components/PopupForm";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,6 +52,7 @@ function App() {
 
       <Footer />
       <WhatsAppButton />
+      <PopupForm />
     </>
   );
 }
