@@ -76,7 +76,7 @@ const About = () => {
                  <Reveal direction="right">
                   <div className="aspect-[4/3] bg-stone-100 overflow-hidden relative group">
                     <img 
-                      src="img/a (2).jpeg" 
+                      src="img/a ().jpeg" 
                       alt="Scaling Capabilities" 
                       className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                     />
@@ -112,7 +112,7 @@ const About = () => {
                 <Reveal direction="left">
                    <div className="aspect-[4/3] bg-stone-100 overflow-hidden relative group">
                     <img 
-                      src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop" 
+                      src="img/a (2).jpeg" 
                       alt="Modern Architecture" 
                       className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                     />
