@@ -27,13 +27,13 @@ const services = [
     id: 'elevation-design',
     title: 'Elevation Design',
     desc: 'Creating modern facades and proportional massing aligned to context and budget. We craft elevations that make a statement while remaining harmonious with the surroundings.',
-    img: 'img/a (3).jpeg',
+    img: 'img/r/r (11).jpeg',
   },
   {
     id: 'construction',
     title: 'Construction',
     desc: 'End-to-end execution with a focus on quality materials, strict supervision, and safety standards. We manage the entire lifecycle, ensuring timelines are met without compromising on structural integrity.',
-    img: 'img/a (1).jpeg',
+    img: 'img/11.jpg',
   },
   {
     id: 'interior-design',
