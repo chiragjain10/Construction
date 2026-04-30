@@ -27,7 +27,7 @@ const StatsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 relative">
           
           {items.map((it, i) => (
-            <div key={it.label} className="relative group px-4 md:px-8 lg:px-12 first:pl-0 last:pr-0 mb-16 md:mb-0">
+            <div key={it.label} className="relative group px-4 md:px-8 lg:px-12 md:first:pl-0 md:last:pr-0 mb-20 md:mb-0 text-center md:text-left">
               
               {/* Premium Vertical Dividers for Desktop */}
               {i !== 0 && (
@@ -35,16 +35,16 @@ const StatsSection = () => {
               )}
               
               <Reveal delay={i * 0.15}>
-                <div className="flex flex-col">
+                <div className="flex flex-col items-center md:items-start">
                   
                   {/* Background "Ghost" Number - Moves on hover */}
-                  <div className="absolute -top-12 left-0 md:left-4 lg:left-8 font-serif text-[10rem] text-white/[0.02] select-none pointer-events-none transition-all duration-1000 group-hover:text-white/[0.05] group-hover:-translate-y-2">
+                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-4 lg:left-8 font-serif text-[8rem] md:text-[10rem] text-white/[0.02] select-none pointer-events-none transition-all duration-1000 group-hover:text-white/[0.05] group-hover:-translate-y-2">
                     0{i + 1}
                   </div>
 
                   {/* Value and Suffix */}
                   <div className="flex items-baseline mb-4">
-                    <div className="font-serif text-6xl md:text-7xl lg:text-[6.5rem] leading-none tracking-tight tabular-nums font-light">
+                    <div className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-none tracking-tight tabular-nums font-light">
                       <CountUp end={it.value} />
                       <span className="text-[#B87333] font-light">{it.suffix}</span>
                     </div>

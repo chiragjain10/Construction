@@ -1,4 +1,7 @@
 export const galleryProjects = [
+
+  { src: 'https://res.cloudinary.com/duzwys877/video/upload/v1777560376/r1_nc7dia.mp4', type: 'residential', isVideo: true },
+  { src: 'https://res.cloudinary.com/duzwys877/video/upload/v1777560320/r2_uydbo5.mp4', type: 'residential', isVideo: true },
   { src: 'img/r/r (1).jpeg', type: 'residential' },
   { src: 'img/r/r (2).jpeg', type: 'residential' },
   { src: 'img/r/r (3).jpeg', type: 'residential' },
@@ -26,6 +29,8 @@ export const galleryProjects = [
   { src: 'img/r/k (4).jpeg', type: 'residential' },
   { src: 'img/r/k (5).jpeg', type: 'residential' },
   { src: 'img/r/k (6).jpeg', type: 'residential' },
+    { src: 'https://res.cloudinary.com/duzwys877/video/upload/v1777560283/c2_l5kr3w.mp4', type: 'commercial', isVideo: true },
+  { src: 'https://res.cloudinary.com/duzwys877/video/upload/v1777560301/c1_gsrkv2.mp4', type: 'commercial', isVideo: true },
   { src: 'img/c/c.jpeg', type: 'commercial' },
   { src: 'img/c/c (1).jpeg', type: 'commercial' },
   { src: 'img/c/c (2).jpeg', type: 'commercial' },

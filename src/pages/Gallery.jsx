@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PageHero from '../Components/PageHero';
 import Reveal from '../Components/Reveal';
 import CTASection from '../Components/home/CTASection';
@@ -6,19 +6,91 @@ import { ArrowUpRight, X } from 'lucide-react';
 
 import { galleryProjects as projects } from '../data/galleryData';
 
+const GalleryCard = ({ project, index, setSelectedItem }) => {
+  const videoRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (project.isVideo && videoRef.current) {
+      videoRef.current.play().catch(err => console.log("Video play failed:", err));
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (project.isVideo && videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
+  return (
+    <div 
+      className="break-inside-avoid cursor-pointer mb-8" 
+      onClick={() => setSelectedItem(project)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Reveal delay={(index % 9) * 0.05}>
+        <div className="group relative overflow-hidden bg-[#0c0a09]">
+          {project.isVideo ? (
+            <video
+              ref={videoRef}
+              src={project.src}
+              muted
+              loop
+              playsInline
+              className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-110 group-hover:opacity-60"
+            />
+          ) : (
+            <img 
+              src={project.src} 
+              alt={project.title || 'Gallery Image'} 
+              className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-110 group-hover:opacity-60" 
+            />
+          )}
+          
+          {/* Overlay Content */}
+          <div className="absolute inset-0 p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+              <span className="text-[#B87333] text-[14px] uppercase tracking-[0.3em] font-bold mb-2 block">
+                {project.type}
+              </span>
+              <h3 className="text-white font-serif text-2xl md:text-3xl mb-6 capitalize">
+                {project.type} Project
+              </h3>
+              <button 
+                className="flex items-center gap-2 text-white text-sm uppercase tracking-widest border-b border-white/30 pb-1 hover:border-white transition-colors cursor-pointer" 
+                onClick={(e) => { e.stopPropagation(); setSelectedItem(project); }}
+              >
+                View Full {project.isVideo ? 'Video' : 'Image'} <ArrowUpRight size={14} />
+              </button>
+            </div>
+          </div>
+          
+          {/* Corner Accent */}
+          <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+             <ArrowUpRight className="text-white w-8 h-8" />
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  );
+};
+
 const Gallery = () => {
   const [visibleCount, setVisibleCount] = useState(9);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
   const [activeFilter, setActiveFilter] = useState('commercial');
 
   const filteredProjects = projects.filter(project => project.type === activeFilter);
+  const videoProjects = filteredProjects.filter(p => p.isVideo);
+  const imageProjects = filteredProjects.filter(p => !p.isVideo);
 
   const handleShowMore = () => {
     setVisibleCount(prev => prev + 9);
   };
 
   const closeOverlay = () => {
-    setSelectedImage(null);
+    setSelectedItem(null);
   };
 
   const filters = [
@@ -67,60 +139,65 @@ const Gallery = () => {
           ))}
         </div>
 
-        <div 
-          key={activeFilter}
-          className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8 transition-all duration-500"
-        >
-          {filteredProjects.slice(0, visibleCount).map((project, i) => (
-            <div key={`${activeFilter}-${i}`} className="break-inside-avoid cursor-pointer" onClick={() => setSelectedImage(project.src)}>
-              <Reveal delay={(i % 9) * 0.05}>
-                <div className="group relative overflow-hidden bg-[#0c0a09]">
-                  {/* Image */}
-                  <img 
-                    src={project.src} 
-                    alt={project.title || 'Gallery Image'} 
-                    className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-110 group-hover:opacity-60" 
-                  />
-                  
-                  {/* Overlay Content */}
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
-                      <span className="text-[#B87333] text-[14px] uppercase tracking-[0.3em] font-bold mb-2 block">
-                        {project.type}
-                      </span>
-                      <h3 className="text-white font-serif text-2xl md:text-3xl mb-6 capitalize">
-                        {project.type} Project
-                      </h3>
-                      <button className="flex items-center gap-2 text-white text-sm uppercase tracking-widest border-b border-white/30 pb-1 hover:border-white transition-colors cursor-pointer" onClick={(e) => { e.stopPropagation(); setSelectedImage(project.src); }}>
-                        View Full Image <ArrowUpRight size={14} />
-                      </button>
-                    </div>
-                  </div>
-                  
-                  {/* Corner Accent */}
-                  <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                     <ArrowUpRight className="text-white w-8 h-8" />
-                  </div>
+        <div key={activeFilter} className="transition-all duration-500">
+          {/* Video Highlights */}
+          {videoProjects.length > 0 && (
+            <div className="mb-20">
+              <Reveal>
+                <div className="flex items-center gap-4 mb-10">
+                  <h2 className="text-3xl font-serif italic text-[#111827]">Video Highlights</h2>
+                  <div className="h-[1px] flex-1 bg-stone-200"></div>
                 </div>
               </Reveal>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl">
+                {videoProjects.map((project, i) => (
+                  <GalleryCard 
+                    key={`video-${activeFilter}-${i}`} 
+                    project={project} 
+                    index={i} 
+                    setSelectedItem={setSelectedItem} 
+                  />
+                ))}
+              </div>
             </div>
-          ))}
+          )}
+
+          {/* Image Gallery */}
+          <div className="mb-10">
+            <Reveal>
+              <div className="flex items-center gap-4 mb-10">
+                <h2 className="text-3xl font-serif italic text-[#111827]">Project Gallery</h2>
+                <div className="h-[1px] flex-1 bg-stone-200"></div>
+              </div>
+            </Reveal>
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-8 transition-all duration-500">
+              {imageProjects.slice(0, visibleCount).map((project, i) => (
+                <GalleryCard 
+                  key={`image-${activeFilter}-${i}`} 
+                  project={project} 
+                  index={i} 
+                  setSelectedItem={setSelectedItem} 
+                />
+              ))}
+            </div>
+          </div>
         </div>
 
-        {visibleCount < filteredProjects.length && (
+        {visibleCount < imageProjects.length && (
           <div className="mt-16 flex justify-center">
             <button 
               onClick={handleShowMore}
-              className="bg-[#111827] text-white px-8 py-4 uppercase tracking-widest text-sm font-bold hover:bg-[#B87333] transition-colors duration-300"
+              className="group relative overflow-hidden bg-[#111827] text-white px-12 py-4 uppercase tracking-[0.2em] text-xs font-bold transition-all duration-500 hover:text-white"
             >
-              Show More
+              <span className="relative z-10">View More Projects</span>
+              <div className="absolute inset-0 bg-[#B87333] translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0"></div>
             </button>
           </div>
         )}
       </section>
 
       {/* Premium Popup Overlay */}
-      {selectedImage && (
+      {selectedItem && (
         <div 
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 backdrop-blur-md p-4 sm:p-6 transition-all duration-500"
           onClick={closeOverlay}
@@ -137,15 +214,24 @@ const Gallery = () => {
               <X size={20} className="sm:w-6 sm:h-6" />
             </button>
             
-            {/* Image Container */}
+            {/* Media Container */}
             <div className="w-full h-full overflow-hidden rounded-2xl bg-black flex items-center justify-center relative">
                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none z-10" />
                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none z-10" />
-               <img 
-                src={selectedImage} 
-                alt="Project Showcase" 
-                className="w-full h-full object-contain select-none shadow-2xl"
-              />
+               {selectedItem.isVideo ? (
+                 <video 
+                   src={selectedItem.src} 
+                   controls 
+                   autoPlay 
+                   className="w-full h-full object-contain shadow-2xl"
+                 />
+               ) : (
+                 <img 
+                   src={selectedItem.src} 
+                   alt="Project Showcase" 
+                   className="w-full h-full object-contain select-none shadow-2xl"
+                 />
+               )}
             </div>
           </div>
         </div>
