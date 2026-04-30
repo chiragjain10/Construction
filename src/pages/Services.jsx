@@ -46,8 +46,8 @@ const services = [
 const Services = () => {
   return (
     <main className="bg-[#f7f7f5] text-[#111827]">
-      <PageHero 
-        title="Our Expertise." 
+      <PageHero
+        title="Our Expertise."
         subtitle="Comprehensive Construction Solutions"
         backgroundImage="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
       />
@@ -56,9 +56,9 @@ const Services = () => {
       <section className="py-24 px-6 md:px-16 max-w-[1440px] mx-auto">
         <div className="max-w-4xl">
           <Reveal>
-             <span className="text-[14px] uppercase tracking-[0.4em] text-[#B87333] font-bold block mb-6">What We Do</span>
+            <span className="text-[14px] uppercase tracking-[0.4em] text-[#B87333] font-bold block mb-6">What We Do</span>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight text-[#0E3A40]">
-              Detailed, accountable, and <span className="italic text-stone-400">design-led</span> services across architecture, interiors, and execution.
+              Detailed, accountable, and <span className="">design-led</span> services across architecture, interiors, and execution.
             </h2>
           </Reveal>
         </div>
@@ -68,18 +68,18 @@ const Services = () => {
       <section className="pb-24 px-6 md:px-16 max-w-[1440px] mx-auto space-y-32">
         {services.map((s, i) => (
           <div key={s.title} className={`grid lg:grid-cols-2 gap-12 md:gap-24 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-            
+
             {/* Image Side */}
             <div className={`relative ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
               <Reveal direction={i % 2 === 1 ? 'left' : 'right'}>
                 <div className={`overflow-hidden relative group rounded-2xl shadow-xl ${i === 1 ? 'max-w-[75%] mx-auto' : ''}`}>
-                   {/* Decorative border frame */}
-                   <div className="absolute inset-0 border border-[#0E3A40]/10 m-4 z-20 pointer-events-none rounded-xl" />
-                   
-                   <img 
-                    src={s.img} 
-                    alt={s.title} 
-                    className="w-full h-auto transition-transform duration-1000 group-hover:scale-105" 
+                  {/* Decorative border frame */}
+                  <div className="absolute inset-0 border border-[#0E3A40]/10 m-4 z-20 pointer-events-none rounded-xl" />
+
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    className="w-full h-auto transition-transform duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-[#0E3A40]/10 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
@@ -96,16 +96,16 @@ const Services = () => {
             <div className={`${i % 2 === 1 ? 'lg:order-1' : ''} relative z-10`}>
               <Reveal direction={i % 2 === 1 ? 'right' : 'left'}>
                 <span className="text-[14px] uppercase tracking-[0.4em] text-[#B87333] font-bold mb-4 block">
-                   Service 0{i + 1}
+                  Service 0{i + 1}
                 </span>
                 <h3 className="text-3xl md:text-4xl font-serif text-[#0E3A40] mb-6">{s.title}</h3>
                 <div className="h-[1px] w-12 bg-[#B87333] mb-8" />
                 <p className="text-stone-600 text-[16px] leading-relaxed mb-10">
                   {s.desc}
                 </p>
-                
+
                 <Link to={`/service/${s.id}`} className="group flex items-center gap-3 text-[#0E3A40] text-[14px] uppercase tracking-widest font-bold">
-                  View Service Details 
+                  View Service Details
                   <span className="w-8 h-[1px] bg-[#0E3A40] group-hover:w-12 transition-all duration-300" />
                 </Link>
               </Reveal>

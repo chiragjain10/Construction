@@ -12,15 +12,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // Enriched data array to support the card labels
+import { galleryProjects } from '../../data/galleryData';
+
+// Select a representative subset for the home slider
 const images = [
-  { src: 'img/a (1).jpeg', num: '01', label: 'Urban Serenity' },
-  { src: 'img/a (2).jpeg', num: '02', label: 'Minimalist Form' },
-  { src: 'img/a (3).jpeg', num: '03', label: 'Golden Hour' },
-  { src: 'img/a (4).jpeg', num: '04', label: 'Abstract Geometry' },
-  { src: 'img/a (5).jpeg', num: '05', label: 'Textural Depth' },
-  { src: 'img/a (7).jpeg', num: '06', label: 'Monochrome Study' },
-  { src: 'img/a (8).jpeg', num: '07', label: 'Light Play' },
-];
+  ...galleryProjects.filter(p => p.type === 'commercial').slice(0, 4),
+  ...galleryProjects.filter(p => p.type === 'residential').slice(0, 4),
+].map((p, i) => ({
+  ...p,
+  num: (i + 1).toString().padStart(2, '0'),
+  label: p.type.charAt(0).toUpperCase() + p.type.slice(1) + ' Project'
+}));
 
 const ProjectsPreview = () => {
   const brandWine = '#B87333';
@@ -165,9 +167,9 @@ const ProjectCard = ({ project, color, teal }) => (
 
       {/* Dynamic Title Reveal on Hover */}
       <div className="absolute bottom-8 left-6 z-20 overflow-hidden">
-        {/* <p className="font-serif text-white text-2xl italic translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.2,1,0.3,1)] delay-75">
+        <p className="font-serif text-white text-2xl italic translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.2,1,0.3,1)] delay-75">
           {project.label}
-        </p> */}
+        </p>
       </div>
 
       {/* Accent Corner Line */}

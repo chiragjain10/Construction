@@ -11,7 +11,7 @@ export const servicesData = [
       'Approval coordination & follow-ups',
       'Occupancy certificate documentation'
     ],
-    image: 'https://images.unsplash.com/photo-1582213726894-4974473a21b4?q=80&w=2070&auto=format&fit=crop',
+    image: '/img/n1.png',
     icon: 'ClipboardCheck'
   },
   {
@@ -26,7 +26,7 @@ export const servicesData = [
       'Cost-efficient structural optimization',
       'On-site structural verification'
     ],
-    image: 'https://images.unsplash.com/photo-1517089596392-db9a5e9478cc?q=80&w=2069&auto=format&fit=crop',
+    image: '/img/a (5).jpeg',
     icon: 'Maximize'
   },
   {
@@ -41,7 +41,7 @@ export const servicesData = [
       'Sustainable & climate-responsive design',
       '3D Visualization & walkthrough previews'
     ],
-    image: 'https://images.unsplash.com/photo-1503387762-592e39c60e79?q=80&w=2071&auto=format&fit=crop',
+    image: '/img/nn.png',
     icon: 'Hammer'
   },
   {
@@ -56,7 +56,7 @@ export const servicesData = [
       'Structural massing & proportional analysis',
       'Detailed technical drawings for execution'
     ],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop',
+    image: '/img/r/r (11).jpeg',
     icon: 'Layers'
   },
   {
@@ -71,7 +71,7 @@ export const servicesData = [
       'Safety management & labor coordination',
       'Timely delivery & budgetary adherence'
     ],
-    image: 'https://images.unsplash.com/photo-1541913057-22102a3e7401?q=80&w=2072&auto=format&fit=crop',
+    image: '/img/11.jpg',
     icon: 'HardHat'
   },
   {
@@ -86,7 +86,7 @@ export const servicesData = [
       'Kitchen & modular storage planning',
       'Detailed 3D interior renderings'
     ],
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2040&auto=format&fit=crop',
+    image: '/img/a (4).jpeg',
     icon: 'Palette'
   }
 ];

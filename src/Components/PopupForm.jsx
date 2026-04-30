@@ -11,13 +11,13 @@ const PopupForm = () => {
   });
 
   useEffect(() => {
-    // Show popup after 1 minute (60,000 ms)
+    // Show popup after 5 seconds (5,000 ms)
     const timer = setTimeout(() => {
       const hasSeenPopup = sessionStorage.getItem('hasSeenPopup');
       if (!hasSeenPopup) {
         setIsOpen(true);
       }
-    }, 60000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
