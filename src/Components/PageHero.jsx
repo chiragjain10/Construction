@@ -25,19 +25,20 @@ const PageHero = ({ title, subtitle, backgroundImage, className = '' }) => {
       <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 md:px-16 flex flex-col justify-end pb-20 md:pb-32">
         <div className="max-w-4xl">
           {/* Top Line */}
+          <h1 className="font-serif text-[9vw] md:text-[5vw] leading-[0.9] text-white mb-6">
+            <Reveal delay={0.5}>
+              {title}
+            </Reveal>
+          </h1>
           <div className={`flex items-center gap-4 mb-6 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <span className="h-[1px] w-8 bg-[#B87333]" />
-            <span className="text-[14px] uppercase tracking-[0.4em] text-stone-400 font-bold">
+            <span className="text-[18px] uppercase tracking-[0.4em] text-stone-400 font-bold">
               {subtitle}
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="font-serif text-[8vw] md:text-[5vw] leading-[0.9] text-white mb-6">
-            <Reveal delay={0.5}>
-              {title}
-            </Reveal>
-          </h1>
+          
         </div>
       </div>
 
