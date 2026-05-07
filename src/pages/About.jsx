@@ -60,7 +60,7 @@ const About = () => {
                 <Reveal direction="left">
                   <div className="aspect-[4/3] bg-stone-100 overflow-hidden relative group">
                     <img 
-                      src="img/a.jpeg" 
+                      src="/img/a.jpeg" 
                       alt="Early Construction" 
                       className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                     />
@@ -76,7 +76,7 @@ const About = () => {
                  <Reveal direction="right">
                   <div className="aspect-[4/3] bg-stone-100 overflow-hidden relative group">
                     <img 
-                      src="img/2010.jpeg" 
+                      src="/img/2010.jpeg" 
                       alt="Scaling Capabilities" 
                       className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                     />
@@ -112,7 +112,7 @@ const About = () => {
                 <Reveal direction="left">
                    <div className="aspect-[4/3] bg-stone-100 overflow-hidden relative group">
                     <img 
-                      src="img/a (2).jpeg" 
+                      src="/img/a (2).jpeg" 
                       alt="Modern Architecture" 
                       className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                     />
@@ -155,7 +155,7 @@ const About = () => {
                 <div className="aspect-[3/4] md:aspect-square bg-stone-800 overflow-hidden border border-white/10 relative">
                    {/* Abstract/Architectural Image */}
                    <img 
-                      src="img/d.png" 
+                      src="/img/d.png" 
                       alt="Architectural Detail" 
                       className="object-cover w-full h-full opacity-60 hover:opacity-100 transition-opacity duration-700"
                    />

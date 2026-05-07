@@ -21,7 +21,7 @@ const HeroSection = () => {
           className={`absolute inset-0 bg-cover bg-center transition-transform duration-[12000ms] ease-out opacity-50 scale-110 ${
             isLoaded ? 'translate-y-0 scale-100' : 'translate-y-4 scale-110'
           }`}
-          style={{ backgroundImage: "url('img/a (1).jpeg')" }}
+          style={{ backgroundImage: "url('/img/a (1).jpeg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/40 to-transparent" />
       </div>

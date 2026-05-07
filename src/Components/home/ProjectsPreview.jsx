@@ -144,41 +144,74 @@ const ProjectsPreview = () => {
 };
 
 /* Internal Component for Project Items */
-const ProjectCard = ({ project, color, teal }) => (
-  <Link to={`/gallery`} className="group block relative">
-    {/* Using portrait aspect ratio (3/4) for an editorial, high-fashion look */}
-    <div className="relative overflow-hidden aspect-[3/4] bg-stone-100">
+const ProjectCard = ({ project, color, teal }) => {
+  const videoRef = useRef(null);
 
-      {/* Number Label - Floating top left */}
-      <div className="absolute top-6 left-6 z-20 overflow-hidden">
-        <span className="block text-[10px] font-bold text-white tracking-widest translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.2,1,0.3,1)]">
-          PROJECT — {project.num}
-        </span>
+  const handleMouseEnter = () => {
+    if (project.isVideo && videoRef.current) {
+      videoRef.current.play().catch(err => console.log("Video play failed:", err));
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (project.isVideo && videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
+  return (
+    <Link 
+      to={`/gallery`} 
+      className="group block relative"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {/* Using portrait aspect ratio (3/4) for an editorial, high-fashion look */}
+      <div className="relative overflow-hidden aspect-[3/4] bg-stone-100">
+
+        {/* Number Label - Floating top left */}
+        <div className="absolute top-6 left-6 z-20 overflow-hidden">
+          <span className="block text-[10px] font-bold text-white tracking-widest translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.2,1,0.3,1)]">
+            PROJECT — {project.num}
+          </span>
+        </div>
+
+        {project.isVideo ? (
+          <video
+            ref={videoRef}
+            src={project.src}
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-[1.5s] ease-[cubic-bezier(0.2,1,0.3,1)]"
+          />
+        ) : (
+          <img
+            src={project.src}
+            alt={project.label}
+            className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-[1.5s] ease-[cubic-bezier(0.2,1,0.3,1)]"
+          />
+        )}
+
+        {/* Premium Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0e3a40]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+        {/* Dynamic Title Reveal on Hover */}
+        <div className="absolute bottom-8 left-6 z-20 overflow-hidden">
+          <p className="font-serif text-white text-2xl italic translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.2,1,0.3,1)] delay-75">
+            {project.label}
+          </p>
+        </div>
+
+        {/* Accent Corner Line */}
+        <div
+          className="absolute bottom-0 left-0 w-0 h-[2px] transition-all duration-700 group-hover:w-full"
+          style={{ backgroundColor: color }}
+        />
       </div>
-
-      <img
-        src={project.src}
-        alt={project.label}
-        className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-[1.5s] ease-[cubic-bezier(0.2,1,0.3,1)]"
-      />
-
-      {/* Premium Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0e3a40]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-      {/* Dynamic Title Reveal on Hover */}
-      <div className="absolute bottom-8 left-6 z-20 overflow-hidden">
-        <p className="font-serif text-white text-2xl italic translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.2,1,0.3,1)] delay-75">
-          {project.label}
-        </p>
-      </div>
-
-      {/* Accent Corner Line */}
-      <div
-        className="absolute bottom-0 left-0 w-0 h-[2px] transition-all duration-700 group-hover:w-full"
-        style={{ backgroundColor: color }}
-      />
-    </div>
-  </Link>
-);
+    </Link>
+  );
+};
 
 export default ProjectsPreview;

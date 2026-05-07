@@ -9,37 +9,37 @@ const services = [
     id: 'plan-approval',
     title: 'Nagar Nigam Plan Approval',
     desc: 'Compliant submissions and Nagar Nigam Naksha approvals. We handle the process of legal compliance and municipal coordination.',
-    img: 'img/n1.png',
+    img: '/img/n1.png',
   },
   {
     id: 'building-planning',
     title: 'Building Planning',
     desc: 'From initial concept to construction-ready drawings, we provide functional planning that balances aesthetics with practicality. Our design process ensures clarity in detailing and efficiency in execution.',
-    img: 'img/nn.png',
+    img: '/img/nn.png',
   },
   {
     id: 'structural-detail',
     title: 'Structure Detailing',
     desc: 'Precise engineering drawings and coordination for safe, efficient structures. Our structural detailing ensures the longevity and stability of your investment.',
-    img: 'img/a (5).jpeg',
+    img: '/img/sc.jpg',
   },
   {
     id: 'elevation-design',
     title: 'Elevation Design',
     desc: 'Creating modern facades and proportional massing aligned to context and budget. We craft elevations that make a statement while remaining harmonious with the surroundings.',
-    img: 'img/r/r (11).jpeg',
+    img: '/img/r/r (11).jpeg',
   },
   {
     id: 'construction',
     title: 'Construction',
     desc: 'End-to-end execution with a focus on quality materials, strict supervision, and safety standards. We manage the entire lifecycle, ensuring timelines are met without compromising on structural integrity.',
-    img: 'img/11.jpg',
+    img: '/img/11.jpg',
   },
   {
     id: 'interior-design',
     title: 'Interior Design',
     desc: 'Clean, durable, and timeless interiors with cohesive material palettes. We focus on creating spaces that are not just visually appealing but also deeply comfortable and functional.',
-    img: 'img/a (4).jpeg',
+    img: '/img/a (4).jpeg',
   },
 ];
 
