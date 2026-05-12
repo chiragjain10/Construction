@@ -157,18 +157,19 @@ const Contact = () => {
       </section>
 
       {/* --- Map Section --- */}
-      <section className="h-[50vh] w-full bg-stone-200 relative group overflow-hidden">
+      <section className="h-[60vh] w-full bg-stone-200 relative group overflow-hidden">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.498422791485!2d80.3957!3d23.8347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDUwJzA0LjkiTiA4MMKwMjMnNDQuNSJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.2206585530294!2d80.3951263!3d23.846297000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3983df9152fdbd03%3A0x5e6d8d2972e6f994!2sManoj%20Builders!5e0!3m2!1sen!2sin!4v1778576194742!5m2!1sen!2sin"
           width="100%" 
           height="100%" 
-          style={{ border: 0, filter: 'grayscale(100%) invert(0%) contrast(80%)' }} 
+          style={{ border: 0 }} 
           allowFullScreen="" 
           loading="lazy"
-          className="group-hover:filter-none transition-all duration-700"
-          title="Map"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Manoj Builders"
+          className="grayscale hover:grayscale-0 transition-all duration-700"
         ></iframe>
-        <div className="absolute inset-0 bg-[#0E3A40]/20 pointer-events-none group-hover:bg-transparent transition-colors duration-500" />
+        <div className="absolute inset-0 bg-[#0E3A40]/10 pointer-events-none group-hover:opacity-0 transition-opacity duration-500" />
       </section>
 
     </main>
