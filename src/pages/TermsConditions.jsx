@@ -51,7 +51,7 @@ const TermsConditions = () => {
 
                         <section className="mb-12 text-stone-500 text-sm italic">
                             <p>Last Updated: April 2026</p>
-                            <p>For legal inquiries, contact us at info@Shubhambuilders.com</p>
+                            <p>For legal inquiries, contact us at info@shubhambuilders.in</p>
                         </section>
                     </div>
                 </Reveal>

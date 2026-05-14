@@ -79,7 +79,7 @@ const GalleryCard = ({ project, index, setSelectedItem }) => {
 const Gallery = () => {
   const [visibleCount, setVisibleCount] = useState(9);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [activeFilter, setActiveFilter] = useState('commercial');
+  const [activeFilter, setActiveFilter] = useState('commercial building');
 
   const filteredProjects = projects.filter(project => project.type === activeFilter);
   const videoProjects = filteredProjects.filter(p => p.isVideo);
@@ -94,8 +94,8 @@ const Gallery = () => {
   };
 
   const filters = [
-    { id: 'commercial', label: 'Commercial' },
-    { id: 'residential', label: 'Residential' },
+    { id: 'commercial building', label: 'Commercial building' },
+    { id: 'residential building', label: 'Residential building' },
   ];
 
   return (

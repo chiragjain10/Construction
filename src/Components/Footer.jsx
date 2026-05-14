@@ -125,12 +125,12 @@ const Footer = () => {
                 <div>
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[#B87333] font-bold block mb-1">Branch Office</span>
                   <p className="text-[14px] font-light text-slate-300 leading-relaxed">
-                    Near Prestige College, Scheme No 113, 
+                    Near Prestige College, Scheme No 113,
                     Vijay Nagar, Indore , MP - 452010
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4 group">
                 <div className="mt-1 p-2 bg-white/5 rounded-sm group-hover:bg-[#B87333]/20 transition-colors">
                   <Phone size={14} className="text-[#B87333]" />
@@ -145,7 +145,7 @@ const Footer = () => {
                   <Mail size={14} className="text-[#B87333]" />
                 </div>
                 <p className="text-[14px] font-light text-slate-300 hover:text-white cursor-pointer transition-colors">
-                  info@Shubhambuilders.com
+                  info@shubhambuilders.in
                 </p>
               </div>
             </div>

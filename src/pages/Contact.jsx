@@ -24,15 +24,15 @@ const Contact = () => {
 
   return (
     <main className="bg-[#f7f7f5] text-[#111827]">
-      <PageHero 
-        title="Get in Touch." 
+      <PageHero
+        title="Get in Touch."
         subtitle="Start Your Journey With Us"
         backgroundImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
       />
 
       <section className="py-24 px-6 md:px-16 max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-20">
-          
+
           {/* --- Contact Info --- */}
           <div className="space-y-16">
             <Reveal>
@@ -51,7 +51,7 @@ const Contact = () => {
                     <MapPin size={20} />
                   </div>
                   <div className="space-y-6">
-                     <div>
+                    <div>
                       <span className="text-[14px] uppercase tracking-[0.3em] text-[#B87333] font-bold block mb-2">Head Office</span>
                       <p className="font-serif text-xl text-[#0E3A40]">Saraswati School Road,</p>
                       <p className="font-serif text-xl text-[#0E3A40]">Nai Basti, Katni (M.P.)</p>
@@ -61,7 +61,7 @@ const Contact = () => {
                       <p className="font-serif text-xl text-[#0E3A40]">Near Prestige College, Scheme No 113-</p>
                       <p className="font-serif text-xl text-[#0E3A40]">Vijay Nagar Indore MP - 452010</p>
                     </div>
-                   
+
                   </div>
                 </div>
               </Reveal>
@@ -86,8 +86,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <span className="text-[14px] uppercase tracking-[0.3em] text-[#B87333] font-bold block mb-2">Email Us</span>
-                    <a href="mailto:contact@Shubhambuilders.com" className="font-serif text-xl text-[#0E3A40] hover:text-[#B87333] transition-colors">
-                      contact@Shubhambuilders.com
+                    <a href="mailto:contact@shubhambuilders.in" className="font-serif text-xl text-[#0E3A40] hover:text-[#B87333] transition-colors">
+                      contact@shubhambuilders.in
                     </a>
                   </div>
                 </div>
@@ -101,46 +101,46 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="space-y-2">
                   <label className="text-sm uppercase tracking-widest text-stone-500 font-bold">Full Name</label>
-                  <input 
+                  <input
                     required
-                    type="text" 
+                    type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full border-b border-stone-300 py-3 text-[#0E3A40] focus:outline-none focus:border-[#B87333] transition-colors bg-transparent placeholder-stone-300" 
+                    className="w-full border-b border-stone-300 py-3 text-[#0E3A40] focus:outline-none focus:border-[#B87333] transition-colors bg-transparent placeholder-stone-300"
                     placeholder="John Doe"
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm uppercase tracking-widest text-stone-500 font-bold">Whatapp No</label>
-                  <input 
+                  <input
                     required
-                    type="tel" 
+                    type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full border-b border-stone-300 py-3 text-[#0E3A40] focus:outline-none focus:border-[#B87333] transition-colors bg-transparent placeholder-stone-300" 
+                    className="w-full border-b border-stone-300 py-3 text-[#0E3A40] focus:outline-none focus:border-[#B87333] transition-colors bg-transparent placeholder-stone-300"
                     placeholder="+91 98765 43210"
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm uppercase tracking-widest text-stone-500 font-bold">Project Address</label>
-                  <textarea 
+                  <textarea
                     required
-                    rows="4" 
+                    rows="4"
                     name="address"
                     value={formData.address}
                     onChange={handleChange}
-                    className="w-full border-b border-stone-300 py-3 text-[#0E3A40] focus:outline-none focus:border-[#B87333] transition-colors bg-transparent placeholder-stone-300 resize-none" 
+                    className="w-full border-b border-stone-300 py-3 text-[#0E3A40] focus:outline-none focus:border-[#B87333] transition-colors bg-transparent placeholder-stone-300 resize-none"
                     placeholder="Enter site location or project address..."
                   ></textarea>
                 </div>
 
                 <div className="pt-4">
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="group relative px-10 py-4 overflow-hidden border border-[#B87333] w-full md:w-auto"
                   >
                     <div className="absolute inset-0 w-0 bg-[#B87333] transition-all duration-500 ease-out group-hover:w-full" />
@@ -158,12 +158,12 @@ const Contact = () => {
 
       {/* --- Map Section --- */}
       <section className="h-[60vh] w-full bg-stone-200 relative group overflow-hidden">
-        <iframe 
+        <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.2206585530294!2d80.3951263!3d23.846297000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3983df9152fdbd03%3A0x5e6d8d2972e6f994!2sManoj%20Builders!5e0!3m2!1sen!2sin!4v1778576194742!5m2!1sen!2sin"
-          width="100%" 
-          height="100%" 
-          style={{ border: 0 }} 
-          allowFullScreen="" 
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Manoj Builders"

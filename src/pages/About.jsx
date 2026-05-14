@@ -18,7 +18,7 @@ const About = () => {
         <div className="max-w-4xl">
           <Reveal>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-8 text-[#0e3a40]">
-              Shubham Builders <span className="italic text-[#B87333]">brings together smart design & quality construction.</span>We specialize in residential & commercial projects across Central India.
+              Shubham Builders <span className="italic text-[#B87333]">brings together smart design & quality construction.</span>We specialize in residential & commercial Buildings projects across Central India.
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
