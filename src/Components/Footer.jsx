@@ -111,10 +111,15 @@ const Footer = () => {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[#B87333] font-bold block mb-1">Head Office</span>
-                  <p className="text-[14px] font-light text-slate-300 leading-relaxed">
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=Saraswati+School+Road,+Nai+Basti,+Katni,+MP+483501"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[14px] font-light text-slate-300 leading-relaxed hover:text-[#B87333] transition-colors"
+                  >
                     Saraswati School Road, <br />
                     Nai Basti, Katni, MP 483501
-                  </p>
+                  </a>
                 </div>
               </div>
               {/* Branch Office */}
@@ -124,10 +129,15 @@ const Footer = () => {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[#B87333] font-bold block mb-1">Branch Office</span>
-                  <p className="text-[14px] font-light text-slate-300 leading-relaxed">
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=Near+Prestige+College,+Scheme+No+113,+Vijay+Nagar,+Indore,+MP+452010"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[14px] font-light text-slate-300 leading-relaxed hover:text-[#B87333] transition-colors"
+                  >
                     Near Prestige College, Scheme No 113,
                     Vijay Nagar, Indore , MP - 452010
-                  </p>
+                  </a>
                 </div>
               </div>
 

@@ -51,16 +51,26 @@ const Contact = () => {
                     <MapPin size={20} />
                   </div>
                   <div className="space-y-6">
-                    <div>
+                    <a 
+                      href="https://www.google.com/maps/search/?api=1&query=Saraswati+School+Road,+Nai+Basti,+Katni,+MP+483501"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group/addr"
+                    >
                       <span className="text-[14px] uppercase tracking-[0.3em] text-[#B87333] font-bold block mb-2">Head Office</span>
-                      <p className="font-serif text-xl text-[#0E3A40]">Saraswati School Road,</p>
-                      <p className="font-serif text-xl text-[#0E3A40]">Nai Basti, Katni (M.P.)</p>
-                    </div>
-                    <div>
+                      <p className="font-serif text-xl text-[#0E3A40] group-hover/addr:text-[#B87333] transition-colors">Saraswati School Road,</p>
+                      <p className="font-serif text-xl text-[#0E3A40] group-hover/addr:text-[#B87333] transition-colors">Nai Basti, Katni (M.P.)</p>
+                    </a>
+                    <a 
+                      href="https://www.google.com/maps/search/?api=1&query=Near+Prestige+College,+Scheme+No+113,+Vijay+Nagar,+Indore,+MP+452010"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group/addr"
+                    >
                       <span className="text-[14px] uppercase tracking-[0.3em] text-[#B87333] font-bold block mb-2">Branch Office</span>
-                      <p className="font-serif text-xl text-[#0E3A40]">Near Prestige College, Scheme No 113-</p>
-                      <p className="font-serif text-xl text-[#0E3A40]">Vijay Nagar Indore MP - 452010</p>
-                    </div>
+                      <p className="font-serif text-xl text-[#0E3A40] group-hover/addr:text-[#B87333] transition-colors">Near Prestige College, Scheme No 113-</p>
+                      <p className="font-serif text-xl text-[#0E3A40] group-hover/addr:text-[#B87333] transition-colors">Vijay Nagar Indore MP - 452010</p>
+                    </a>
 
                   </div>
                 </div>
