@@ -1,30 +1,33 @@
 import { Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import "./App.css";
 
-import Home from "./pages/Home";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import ScrollToTop from "./Components/BackToTop";
 import Preloader from "./Components/Preloader";
-import About from "./pages/About.jsx";
-import Services from "./pages/Services.jsx";
-import Gallery from "./pages/Gallery.jsx";
-import Contact from "./pages/Contact.jsx";
-import ServiceDetail from "./pages/ServiceDetail.jsx";
-import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
-import TermsConditions from "./pages/TermsConditions.jsx";
-import NotFound from "./Components/Notfound.jsx";
 import WhatsAppButton from "./Components/WhatsAppButton";
 import PopupForm from "./Components/PopupForm";
+
+// Lazy Load Pages for Performance
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About.jsx"));
+const Services = lazy(() => import("./pages/Services.jsx"));
+const Gallery = lazy(() => import("./pages/Gallery.jsx"));
+const Contact = lazy(() => import("./pages/Contact.jsx"));
+const ServiceDetail = lazy(() => import("./pages/ServiceDetail.jsx"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.jsx"));
+const TermsConditions = lazy(() => import("./pages/TermsConditions.jsx"));
+const NotFound = lazy(() => import("./Components/Notfound.jsx"));
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Reduced timeout for faster perceived performance
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500); // ⏳ premium slow reveal
+    }, 1200); 
 
     return () => clearTimeout(timer);
   }, []);

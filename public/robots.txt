@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ambivineyards.com/sitemap.xml
+Sitemap: https://shubhambuilders.in/sitemap.xml
